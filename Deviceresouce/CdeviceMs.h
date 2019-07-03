@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include "CdeviM.h"
-
+#include"DataBaseADO.h"
 // CdeviceMs 对话框
 
 class CdeviceMs : public CDialogEx
@@ -17,7 +17,11 @@ public:
 #endif
 private:
 	CdeviM dlg;
+public:
+	CString VariantToCString(_variant_t var);
+private:
 
+	CDataBaseADO m_DataBase;
 
 protected:
 	afx_msg void OnPaint();
@@ -30,4 +34,19 @@ public:
 	afx_msg void OnBnClickedButton1();
 	virtual BOOL OnInitDialog();
 	//afx_msg void OnPaint();
+	CListCtrl m_listdeviM;
+	CComboBox m_combox1;
+	afx_msg void OnBnClickedButton2();
+	CEdit m_edit1;
+	CEdit m_edit2;
+	CEdit m_edit3;
+	CEdit m_edit4;
+	CEdit m_edit5;
+	CEdit m_edit6;
+	CString m_editv1;
+	CString m_editv2;
+	CString m_editv3;
+	CString m_editv4;
+	CString m_editv5;
+	CString m_editv6;
 };

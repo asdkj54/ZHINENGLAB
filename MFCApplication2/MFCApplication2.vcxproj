@@ -75,7 +75,7 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="C:\Users\sartreck\Desktop\opencv_debug.props" />
+    <Import Project="C:\Users\sartreck\Desktop\opencv_release.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -190,6 +190,7 @@
     <ClInclude Include="Cdlalog1.h" />
     <ClInclude Include="Cdlalog2.h" />
     <ClInclude Include="Cdlalog3.h" />
+    <ClInclude Include="DataBaseADO.h" />
     <ClInclude Include="MFCApplication2.h" />
     <ClInclude Include="MFCApplication2Dlg.h" />
     <ClInclude Include="Resource.h" />
@@ -200,6 +201,7 @@
     <ClCompile Include="Cdlalog1.cpp" />
     <ClCompile Include="Cdlalog2.cpp" />
     <ClCompile Include="Cdlalog3.cpp" />
+    <ClCompile Include="DataBaseADO.cpp" />
     <ClCompile Include="MFCApplication2.cpp" />
     <ClCompile Include="MFCApplication2Dlg.cpp" />
     <ClCompile Include="stdafx.cpp">

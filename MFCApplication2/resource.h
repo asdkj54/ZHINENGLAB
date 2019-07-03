@@ -1,6 +1,6 @@
-Ôªø//{{NO_DEPENDENCIES}}
-// Microsoft Visual C++ ÁîüÊàêÁöÑÂåÖÂê´Êñá‰ª∂„ÄÇ
-// ‰æõ MFCApplication2.rc ‰ΩøÁî®
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ …˙≥…µƒ∞¸∫¨Œƒº˛°£
+// π© MFCApplication2.rc  π”√
 //
 #define IDM_ABOUTBOX                    0x0010
 #define IDD_ABOUTBOX                    100
@@ -13,6 +13,12 @@
 #define IDC_COMBO1                      1002
 #define IDC_BUTTON3                     1005
 #define IDC_COMBO2                      1006
+#define IDC_LIST1                       1007
+#define IDC_BUTTON1                     1008
+#define IDC_BUTTON4                     1008
+#define IDC_BUTTON11                    1008
+#define IDC_BUTTON2                     1009
+#define IDC_EDIT1                       1010
 
 // Next default values for new objects
 // 
@@ -20,7 +26,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        139
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1007
+#define _APS_NEXT_CONTROL_VALUE         1013
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

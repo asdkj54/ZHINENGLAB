@@ -6,7 +6,8 @@
 #include "Cdlalog1.h"
 #include "Cdlalog2.h"
 #include "Cdlalog3.h"
-
+#include "afxcmn.h"
+#include "DataBaseADO.h"
 // CMFCApplication2Dlg 对话框
 class CMFCApplication2Dlg : public CDialogEx
 {
@@ -36,15 +37,28 @@ protected:
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
-	DECLARE_MESSAGE_MAP()
+	DECLARE_MESSAGE_MAP();
 public:
 	CString m_button;
-	afx_msg void OnCbnSelchangeCombo1();
+
 	afx_msg void OnBnClickedButton1();
 private:
-	CComboBox m_combobox1;
+//	CComboBox m_combobox1;
+	CDataBaseADO m_DataBase;
 public:
+//	CComboBox m_combox2;
+	CString VariantToCString(_variant_t var);
+
+private:
+	CListCtrl m_ListCtrl;
+public:
+	afx_msg void OnBnClickedButton2();
+	
+	afx_msg void OnBnClickedButton11();
+
+	CEdit insert;
+	CString m_insert1;
 	CComboBox m_combox2;
-	afx_msg void OnCbnSelchangeCombo2();
 	afx_msg void OnBnClickedButton3();
+	afx_msg void showsqlorder();
 };

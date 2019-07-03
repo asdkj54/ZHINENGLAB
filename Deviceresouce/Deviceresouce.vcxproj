@@ -188,6 +188,7 @@
     <ClInclude Include="CdeviM.h" />
     <ClInclude Include="CresoM.h" />
     <ClInclude Include="CresourceMs.h" />
+    <ClInclude Include="DataBaseADO.h" />
     <ClInclude Include="Deviceresouce.h" />
     <ClInclude Include="DeviceresouceDlg.h" />
     <ClInclude Include="Resource.h" />
@@ -200,6 +201,7 @@
     <ClCompile Include="CdeviM.cpp" />
     <ClCompile Include="CresoM.cpp" />
     <ClCompile Include="CresourceMs.cpp" />
+    <ClCompile Include="DataBaseADO.cpp" />
     <ClCompile Include="Deviceresouce.cpp" />
     <ClCompile Include="DeviceresouceDlg.cpp" />
     <ClCompile Include="stdafx.cpp">

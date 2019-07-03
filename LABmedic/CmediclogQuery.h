@@ -3,7 +3,7 @@
 #include "CQuerysource.h"
 #include "CQuerystaff.h"
 #include "CQueryuse.h"
-
+#include"DataBaseADO.h"
 // CmediclogQuery 对话框
 
 class CmediclogQuery : public CDialogEx
@@ -18,6 +18,11 @@ public:
 #ifdef AFX_DESIGN_TIME
 	enum { IDD = IDD_mediclogQuery };
 #endif
+public:
+	CString VariantToCString(_variant_t var);
+private:
+
+	CDataBaseADO m_DataBase;
 private:
 	CQuerydate dlg;
 	CQuerysource dlg1;
@@ -36,4 +41,17 @@ public:
 	afx_msg void OnBnClickedButton4();
 private:
 	CListCtrl m_listQuery;
+public:
+	CComboBox m_comboxm1;
+	CComboBox m_comboxm2;
+	CComboBox m_comboxm3;
+	afx_msg void OnBnClickedButton5();
+	CString m_editm1;
+	CString m_editm2;
+	CString m_editm3;
+	CEdit m_editm4;
+	CString m_editm44;
+	CString m_editm5;
+	CEdit m_editm6;
+	CString m_editm66;
 };

@@ -189,6 +189,7 @@
     <ClInclude Include="CQuerystaff.h" />
     <ClInclude Include="CQueryuse.h" />
     <ClInclude Include="Csafelog.h" />
+    <ClInclude Include="DataBaseADO.h" />
     <ClInclude Include="LABmedic.h" />
     <ClInclude Include="LABmedicDlg.h" />
     <ClInclude Include="Resource.h" />
@@ -202,6 +203,7 @@
     <ClCompile Include="CQuerystaff.cpp" />
     <ClCompile Include="CQueryuse.cpp" />
     <ClCompile Include="Csafelog.cpp" />
+    <ClCompile Include="DataBaseADO.cpp" />
     <ClCompile Include="LABmedic.cpp" />
     <ClCompile Include="LABmedicDlg.cpp" />
     <ClCompile Include="stdafx.cpp">

@@ -39,6 +39,9 @@
     <ClInclude Include="Cdlalog3.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="DataBaseADO.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MFCApplication2.cpp">
@@ -57,6 +60,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Cdlalog3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBaseADO.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

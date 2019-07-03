@@ -57,6 +57,9 @@
     <ClInclude Include="CdeviceMs.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="DataBaseADO.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ZHINENGLAB.cpp">
@@ -93,6 +96,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="CdeviceMs.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBaseADO.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

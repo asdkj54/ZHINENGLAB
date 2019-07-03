@@ -192,6 +192,7 @@
     <ClInclude Include="CVISIT.h" />
     <ClInclude Include="Cwork.h" />
     <ClInclude Include="Cworklogin.h" />
+    <ClInclude Include="DataBaseADO.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -208,6 +209,7 @@
     <ClCompile Include="CVISIT.cpp" />
     <ClCompile Include="Cwork.cpp" />
     <ClCompile Include="Cworklogin.cpp" />
+    <ClCompile Include="DataBaseADO.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

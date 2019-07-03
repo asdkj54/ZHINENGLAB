@@ -9,7 +9,7 @@
 #endif
 
 #include "resource.h"		// 主符号
-
+#include "DataBaseADO.h"
 
 // CMFCApplication2App:
 // 有关此类的实现，请参阅 MFCApplication2.cpp
@@ -19,6 +19,7 @@ class CMFCApplication2App : public CWinApp
 {
 public:
 	CMFCApplication2App();
+
 
 // 重写
 public:
