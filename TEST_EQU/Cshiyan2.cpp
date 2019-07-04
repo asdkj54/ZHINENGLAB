@@ -29,6 +29,7 @@ void Cshiyan2::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(Cshiyan2, CDialogEx)
 	ON_WM_PAINT()
+	ON_BN_CLICKED(IDC_BUTTON2, &Cshiyan2::OnBnClickedButton2)
 END_MESSAGE_MAP()
 
 
@@ -54,4 +55,10 @@ void Cshiyan2::OnPaint()
 	dc.SetStretchBltMode(HALFTONE);             //***********添加于此,背景失真
 	dc.StretchBlt(0, 0, rect.Width(), rect.Height(), &dcBmp, 0, 0, m_bitmap.bmWidth, m_bitmap.bmHeight, SRCCOPY);
 
+}
+
+
+void Cshiyan2::OnBnClickedButton2()
+{
+	// TODO: 在此添加控件通知处理程序代码
 }
