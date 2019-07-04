@@ -1,5 +1,5 @@
 ﻿#pragma once
-
+#include"Cshiyan6report.h"
 
 // Cshiyan6 对话框
 
@@ -15,11 +15,19 @@ public:
 #ifdef AFX_DESIGN_TIME
 	enum { IDD = IDD_shiyan6 };
 #endif
-
+private:
+	Cshiyan6report dlg;
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
-
+	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
+	CBrush m_brush;
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnPaint();
+	afx_msg void OnBnClickedButton1();
+	afx_msg void OnBnClickedButton5();
+	afx_msg void OnBnClickedButton4();
+	afx_msg void OnBnClickedopenGetFile();
+	afx_msg void OnBnClickedButton2();
+	virtual BOOL OnInitDialog();
 };

@@ -31,7 +31,9 @@ BEGIN_MESSAGE_MAP(Cshiyan3, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON1, &Cshiyan3::OnBnClickedButton1)
 	ON_BN_CLICKED(IDC_BUTTON2, &Cshiyan3::OnBnClickedButton2)
 	ON_WM_PAINT()
+	ON_WM_CTLCOLOR()
 	ON_BN_CLICKED(IDC_BUTTON4, &Cshiyan3::OnBnClickedButton4)
+	ON_BN_CLICKED(IDC_BUTTON5, &Cshiyan3::OnBnClickedButton5)
 END_MESSAGE_MAP()
 
 
@@ -48,6 +50,7 @@ void Cshiyan3::OnBnClickedButton1()
 void Cshiyan3::OnBnClickedButton2()
 {
 	// TODO: 在此添加控件通知处理程序代码
+	dlg.ShowWindow(SW_SHOWNORMAL);
 }
 
 
@@ -76,4 +79,88 @@ void Cshiyan3::OnPaint()
 void Cshiyan3::OnBnClickedButton4()
 {
 	// TODO: 在此添加控件通知处理程序代码
+	OnBnClickedopenGetFile();
+}
+
+HBRUSH Cshiyan3::OnCtlColor(CDC * pDC, CWnd * pWnd, UINT nCtlColor)
+{
+	HBRUSH hbr = CDialogEx::OnCtlColor(pDC, pWnd, nCtlColor);
+
+	// TODO:  在此更改 DC 的任何特性
+	static CBrush gBr;
+	static bool isInited = false;
+	if (!isInited)
+	{
+		CBitmap bitmap;
+		bitmap.LoadBitmap(IDB_BITMAP1);
+		gBr.CreatePatternBrush(&bitmap);
+		COLORREF clearColor = -1;
+		bitmap.DeleteObject();
+		isInited = true;
+	}
+	if (pWnd == this)
+	{
+		pDC->SetBkMode(TRANSPARENT);
+		return gBr; //主窗口背景使用这个背景刷
+	}
+	else
+	{
+		pDC->SetBkMode(TRANSPARENT);
+		return   (HBRUSH)::GetStockObject(NULL_BRUSH); //其他控件使用透明背景
+	}
+
+
+	// TODO:  如果默认的不是所需画笔，则返回另一个画笔
+	return hbr;
+
+}
+
+
+
+void Cshiyan3::OnBnClickedButton5()
+{
+	// TODO: 在此添加控件通知处理程序代码	
+	OnBnClickedopenGetFile();
+}
+void Cshiyan3::OnBnClickedopenGetFile()
+{
+	// 设置过滤器   
+	TCHAR szFilter[] = _T("*.doc|*.doc|*.pdf|*.pdf||");
+	// 构造打开文件对话框   
+	CFileDialog fileDlg(TRUE, _T("doc"), NULL, 0, szFilter, this);
+	CString strFilePath;
+	// 显示打开文件对话框   
+	if (IDOK == fileDlg.DoModal())
+
+	{
+		// 得到我们的选择文件的地址，用于之后的打开文件的操作
+		strFilePath = fileDlg.GetPathName();
+		//添加读取这个文件内容的代码，CFile::modeRead是说以只读文件的模式打开
+		CStdioFile file;
+		file.Open(strFilePath, CFile::modeReadWrite);
+
+		//逐行读取字符串
+		CString szLine;
+		CString strText;
+		while (file.ReadString(szLine))
+		{
+			strText += szLine;
+		}
+		//这里得到的strText就是我们文章内部的内容，得到内容之后我们就可以进行我们需要进行的操作了
+		//SetDlgItemText(ID_showBox, strText);//这里是时候我们将我们的内容显示到ID是ID_showBox的组件中（实际上这是一个编辑框）
+		//关闭文件
+		file.Close();
+	}
+}
+
+BOOL Cshiyan3::OnInitDialog()
+{
+	CDialogEx::OnInitDialog();
+
+	// TODO:  在此添加额外的初始化
+
+	dlg.Create(IDD_shiyan3report);
+
+	return TRUE;  // return TRUE unless you set the focus to a control
+				  // 异常: OCX 属性页应返回 FALSE
 }

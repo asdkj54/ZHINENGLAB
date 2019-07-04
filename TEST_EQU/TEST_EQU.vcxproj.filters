@@ -72,6 +72,30 @@
     <ClInclude Include="DataBaseADO.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Cshiyan3report.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cshiyan4report.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cshiyan44report.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cshiyan5report.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cshiyan6report.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cshiyan7report.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cshiyan8report.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cshiyan9report.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TEST_EQU.cpp">
@@ -123,6 +147,30 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="DataBaseADO.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cshiyan3report.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cshiyan4report.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cshiyan44report.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cshiyan5report.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cshiyan6report.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cshiyan7report.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cshiyan8report.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cshiyan9report.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

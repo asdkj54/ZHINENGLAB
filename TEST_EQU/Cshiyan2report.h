@@ -20,4 +20,13 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
 
 	DECLARE_MESSAGE_MAP()
+public:
+	CListCtrl m_listshiyan2;
+	CComboBox m_comboxs2;
+	CString m_edits21;
+	CString m_edits22;
+
+	CString m_edits25;
+	CString m_edits24;
+	CString m_edits23;
 };
