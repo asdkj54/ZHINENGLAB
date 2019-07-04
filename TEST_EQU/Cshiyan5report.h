@@ -1,5 +1,5 @@
 ﻿#pragma once
-
+#include "DataBaseADO.h"
 
 // Cshiyan5report 对话框
 
@@ -15,6 +15,11 @@ public:
 #ifdef AFX_DESIGN_TIME
 	enum { IDD = IDD_shiyan5report };
 #endif
+public:
+	CString VariantToCString(_variant_t var);
+private:
+
+	CDataBaseADO m_DataBase;
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
@@ -28,4 +33,8 @@ public:
 	CString m_edits53;
 	CString m_edits54;
 	CString m_edits55;
+	virtual BOOL OnInitDialog();
+	afx_msg void OnBnClickedButton1();
+	afx_msg void OnBnClickedButton2();
+	afx_msg void OnBnClickedButton3();
 };

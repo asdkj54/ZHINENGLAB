@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include"Cshiyan4report.h"
+#include"Cshiyan44report.h"
 
 // Cshiyan4 对话框
 
@@ -16,7 +16,7 @@ public:
 	enum { IDD = IDD_shiyan4 };
 #endif
 private:
-	Cshiyan4report dlg;
+	Cshiyan44report dlg;
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持

@@ -191,7 +191,6 @@
     <ClInclude Include="Cshiyan3report.h" />
     <ClInclude Include="Cshiyan4.h" />
     <ClInclude Include="Cshiyan44report.h" />
-    <ClInclude Include="Cshiyan4report.h" />
     <ClInclude Include="Cshiyan5.h" />
     <ClInclude Include="Cshiyan5report.h" />
     <ClInclude Include="Cshiyan6.h" />
@@ -220,7 +219,6 @@
     <ClCompile Include="Cshiyan3report.cpp" />
     <ClCompile Include="Cshiyan4.cpp" />
     <ClCompile Include="Cshiyan44report.cpp" />
-    <ClCompile Include="Cshiyan4report.cpp" />
     <ClCompile Include="Cshiyan5.cpp" />
     <ClCompile Include="Cshiyan5report.cpp" />
     <ClCompile Include="Cshiyan6.cpp" />

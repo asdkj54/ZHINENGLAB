@@ -75,9 +75,6 @@
     <ClInclude Include="Cshiyan3report.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Cshiyan4report.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Cshiyan44report.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -150,9 +147,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Cshiyan3report.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Cshiyan4report.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Cshiyan44report.cpp">

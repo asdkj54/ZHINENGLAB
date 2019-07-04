@@ -1,5 +1,5 @@
 ﻿#pragma once
-
+#include "DataBaseADO.h"
 
 // Cshiyan2report 对话框
 
@@ -16,6 +16,11 @@ public:
 	enum { IDD = IDD_shiyan2report };
 #endif
 
+public:
+	CString VariantToCString(_variant_t var);
+private:
+
+	CDataBaseADO m_DataBase;
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
 
@@ -29,4 +34,8 @@ public:
 	CString m_edits25;
 	CString m_edits24;
 	CString m_edits23;
+	afx_msg void OnBnClickedButton1();
+	afx_msg void OnBnClickedButton2();
+	afx_msg void OnBnClickedButton3();
+	virtual BOOL OnInitDialog();
 };
