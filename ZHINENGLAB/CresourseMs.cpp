@@ -83,7 +83,7 @@ void CresourseMs::OnBnClickedButton1()
 	CString strC;
 	m_zrcombox1.GetLBText(index, strC);        //根据行号，这个可以得到那行的字符串  
 	CString strSQL; //存放sql语句
-	strSQL.Format(_T("select * from resMs where 物资 = '%s'"), strC);
+	strSQL.Format(_T("select * from resMs where 物资 = '%s' order by 最近使用日期 desc"), strC);
 	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
 	m_zlistresM.DeleteAllItems();	//删除所有的项目
 	//通过循环添加所有的内容
@@ -211,7 +211,7 @@ void CresourseMs::OnBnClickedButton2()
 	CString strC;
 	m_zrcombox2.GetLBText(index, strC);        //根据行号，这个可以得到那行的字符串  
 	CString strSQL; //存放sql语句
-	strSQL.Format(_T("select * from resMs where 工作台 = '%s'"), strC);
+	strSQL.Format(_T("select * from resMs where 工作台 = '%s' order by 最近使用日期 desc"), strC);
 	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
 	m_zlistresM.DeleteAllItems();	//删除所有的项目
 	//通过循环添加所有的内容
@@ -245,7 +245,7 @@ void CresourseMs::OnBnClickedButton4()
 	//查询结果
 	
 	CString strSQL; //存放sql语句
-	strSQL.Format(_T("select * from resMs order by 最近使用日期"));
+	strSQL.Format(_T("select * from resMs order by 最近使用日期 desc"));
 	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
 	m_zlistresM.DeleteAllItems();	//删除所有的项目
 	//通过循环添加所有的内容

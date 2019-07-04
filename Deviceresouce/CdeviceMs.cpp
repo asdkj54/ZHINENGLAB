@@ -80,7 +80,7 @@ void CdeviceMs::OnBnClickedButton1()
 	CString strC;
 	m_combox1.GetLBText(index, strC);        //根据行号，这个可以得到那行的字符串  
 	CString strSQL; //存放sql语句
-	strSQL.Format(_T("select * from DevMs where 设备名称 = '%s'"),strC );
+	strSQL.Format(_T("select * from DevMs where 设备名称 = '%s' order by 最近维护时间 desc"),strC );
 	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
 	m_listdeviM.DeleteAllItems();	//删除所有的项目
 	//通过循环添加所有的内容

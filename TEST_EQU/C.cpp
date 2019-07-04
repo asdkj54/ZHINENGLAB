@@ -25,7 +25,7 @@ C::C(CWnd* pParent /*=nullptr*/)
 	, m_text19(_T(""))
 	, m_text110(_T(""))
 	, m_text111(_T(""))
-	, m_textsourse(_T(""))
+
 {
 
 }
@@ -50,7 +50,7 @@ void C::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, IDC_EDIT11, m_text19);
 	DDX_Text(pDX, IDC_EDIT12, m_text110);
 	DDX_Text(pDX, IDC_EDIT3, m_text111);
-	DDX_Text(pDX, IDC_EDIT1, m_textsourse);
+	//  DDX_Text(pDX, IDC_EDIT1, m_textsourse);
 	DDX_Control(pDX, IDC_COMBO2, m_combox1);
 }
 
@@ -267,7 +267,7 @@ void C::OnBnClickedButton1()
 	//CString strC;
 	//m_combox1.GetLBText(index, strC);        //根据行号，这个可以得到那行的字符串  
 	CString strSQL; //存放sql语句
-	strSQL.Format(_T("select * from test1 order by 日期"));
+	strSQL.Format(_T("select * from test1 order by 日期 desc"));
 	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
 	m_listtestrecord.DeleteAllItems();	//删除所有的项目
 	//通过循环添加所有的内容
@@ -320,7 +320,7 @@ void C::OnBnClickedButton2()
 	CString sqlorder;
 	sqlorder = strC;
 	CString strSQL; //存放sql语句
-	strSQL.Format(_T("select * from test1 where 试验样品来源 = '%s'"),sqlorder);
+	strSQL.Format(_T("select * from test1 where 试验样品来源 = '%s' order by 日期 desc"),sqlorder);
 	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
 	m_listtestrecord.DeleteAllItems();	//删除所有的项目
 	//通过循环添加所有的内容

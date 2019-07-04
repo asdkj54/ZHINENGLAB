@@ -43,6 +43,6 @@ public:
 	CString m_text19;
 	CString m_text110;
 	CString m_text111;
-	CString m_textsourse;
+//	CString m_textsourse;
 	CComboBox m_combox1;
 };

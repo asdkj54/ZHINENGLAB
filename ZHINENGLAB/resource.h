@@ -22,6 +22,16 @@
 #define IDI_ICON2                       160
 #define IDI_ICON3                       161
 #define IDB_BITMAP2                     162
+#define IDD_text1                       163
+#define IDD_text2                       165
+#define IDD_text3                       166
+#define IDD_text4                       167
+#define IDD_text5                       168
+#define IDD_text6                       169
+#define IDD_text7                       170
+#define IDD_text8                       171
+#define IDD_text9                       172
+#define IDD_text10                      173
 #define IDC_BUTTON1                     1000
 #define IDC_BUTTON2                     1001
 #define IDC_OCX1                        1003
@@ -97,7 +107,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        163
+#define _APS_NEXT_RESOURCE_VALUE        183
 #define _APS_NEXT_COMMAND_VALUE         32771
 #define _APS_NEXT_CONTROL_VALUE         1018
 #define _APS_NEXT_SYMED_VALUE           101

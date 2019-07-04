@@ -60,6 +60,36 @@
     <ClInclude Include="DataBaseADO.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Ctext1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctext2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctext3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctext4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctext5.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctext6.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctext7.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctext8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctext9.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctext10.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ZHINENGLAB.cpp">
@@ -99,6 +129,36 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="DataBaseADO.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctext1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctext2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctext3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctext4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctext5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctext6.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctext7.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctext8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctext9.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctext10.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

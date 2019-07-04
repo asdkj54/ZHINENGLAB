@@ -158,7 +158,7 @@ void CmediclogQuery::OnBnClickedButton2()
 	//CString strC;
 	//m_comboxm1.GetLBText(index, strC);        //根据行号，这个可以得到那行的字符串  
 	//CString strSQL; //存放sql语句
-	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(L"select * from LABmedic order by 日期"), vName));
+	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(L"select * from LABmedic order by 领用时间 desc"), vName));
 	
 	m_listQuery.DeleteAllItems();	//删除所有的项目
 	//通过循环添加所有的内容
@@ -198,7 +198,7 @@ void CmediclogQuery::OnBnClickedButton1()
 	CString strC;
 	m_comboxm1.GetLBText(index, strC);        //根据行号，这个可以得到那行的字符串  
 	CString strSQL; //存放sql语句
-	strSQL.Format(_T("select * from LABmedic where 药品 = '%s'"), strC);
+	strSQL.Format(_T("select * from LABmedic where 药品 = '%s' order by 领用时间 desc"), strC);
 	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
 	m_listQuery.DeleteAllItems();	//删除所有的项目
 	//通过循环添加所有的内容
@@ -237,7 +237,7 @@ void CmediclogQuery::OnBnClickedButton3()
 	CString strC;
 	m_comboxm2.GetLBText(index, strC);        //根据行号，这个可以得到那行的字符串  
 	CString strSQL; //存放sql语句
-	strSQL.Format(_T("select * from LABmedic where 人员 = '%s'"), strC);
+	strSQL.Format(_T("select * from LABmedic where 人员 = '%s' order by 领用时间 desc"), strC);
 	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
 	m_listQuery.DeleteAllItems();	//删除所有的项目
 	//通过循环添加所有的内容
@@ -276,7 +276,7 @@ void CmediclogQuery::OnBnClickedButton4()
 	CString strC;
 	m_comboxm3.GetLBText(index, strC);        //根据行号，这个可以得到那行的字符串  
 	CString strSQL; //存放sql语句
-	strSQL.Format(_T("select * from LABmedic where 药品用途 = '%s'"), strC);
+	strSQL.Format(_T("select * from LABmedic where 药品用途 = '%s' order by 领用时间 desc"), strC);
 	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
 	m_listQuery.DeleteAllItems();	//删除所有的项目
 	//通过循环添加所有的内容
