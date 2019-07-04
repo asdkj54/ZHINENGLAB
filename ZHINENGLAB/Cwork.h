@@ -58,5 +58,5 @@ public:
 	afx_msg void OnPaint();
 	
 
-	CEdit m_editshow1;
+//	CEdit m_editshow1;
 };

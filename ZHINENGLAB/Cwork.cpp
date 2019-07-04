@@ -28,7 +28,7 @@ void Cwork::DoDataExchange(CDataExchange* pDX)
 	CDialogEx::DoDataExchange(pDX);
 
 
-	DDX_Control(pDX, IDC_EDIT1, m_editshow1);
+	//  DDX_Control(pDX, IDC_EDIT1, m_editshow1);
 }
 
 
@@ -76,8 +76,8 @@ BOOL Cwork::OnInitDialog()
 	CDialogEx::OnInitDialog();
 
 	// TODO:  在此添加额外的初始化
-	m_editshow1.SetWindowTextW(TEXT("当前工作台闲置"));
-	SetDlgItemText(IDC_COMBO1, TEXT("工作台1"));
+	
+	
 	dlg.Create(IDD_deviceresourse);
 	return TRUE;  // return TRUE unless you set the focus to a control
 				  // 异常: OCX 属性页应返回 FALSE

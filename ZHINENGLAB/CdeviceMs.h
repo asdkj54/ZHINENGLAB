@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include "CdevM.h"
-
+#include "DataBaseADO.h"
 
 // CdeviceMs 对话框
 
@@ -16,6 +16,11 @@ public:
 #ifdef AFX_DESIGN_TIME
 	enum { IDD = IDD_deviceMs };
 #endif
+public:
+	CString VariantToCString(_variant_t var);
+private:
+
+	CDataBaseADO m_DataBase;
 private:
 	CdevM dlg;
 protected:
@@ -26,4 +31,8 @@ public:
 	virtual BOOL OnInitDialog();
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnPaint();
+	CComboBox m_zcombox1;
+	CComboBox m_zcombox2;
+	CListCtrl m_listZdevm;
+	afx_msg void OnBnClickedButton2();
 };
