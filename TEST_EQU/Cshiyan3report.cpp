@@ -140,7 +140,7 @@ BOOL Cshiyan3report::OnInitDialog()
 void Cshiyan3report::OnBnClickedButton1()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=172.20.126.25,1433;Database=text;uid=300391;pwd=30039621;"))
+	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
 		return;
 	vector<_variant_t> vName;	//设置要返回的列名
 	vName.push_back("工作台");
@@ -179,7 +179,7 @@ void Cshiyan3report::OnBnClickedButton1()
 void Cshiyan3report::OnBnClickedButton2()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=172.20.126.25,1433;Database=text;uid=300391;pwd=30039621;"))
+	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
 		return;
 	vector<_variant_t> vName;	//设置要返回的列名
 	vName.push_back("工作台");
@@ -221,7 +221,7 @@ void Cshiyan3report::OnBnClickedButton2()
 void Cshiyan3report::OnBnClickedButton3()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=172.20.126.25,1433;Database=text;uid=300391;pwd=30039621;"))
+	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
 		return;
 	vector<_variant_t> vName;	//设置要返回的列名
 	vName.push_back("工作台");

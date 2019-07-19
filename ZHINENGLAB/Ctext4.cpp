@@ -128,7 +128,7 @@ BOOL Ctext4::OnInitDialog()
 void Ctext4::OnBnClickedButton1()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=172.20.126.25,1433;Database=text;uid=300391;pwd=30039621;"))
+	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
 		return;
 	vector<_variant_t> vName;	//设置要返回的列名
 	vName.push_back("工作台");
@@ -167,7 +167,7 @@ void Ctext4::OnBnClickedButton1()
 void Ctext4::OnBnClickedButton2()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=172.20.126.25,1433;Database=text;uid=300391;pwd=30039621;"))
+	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
 		return;
 	vector<_variant_t> vName;	//设置要返回的列名
 	vName.push_back("工作台");
@@ -178,11 +178,11 @@ void Ctext4::OnBnClickedButton2()
 	//查询结果
 
 	UpdateData(TRUE);                       //这个函数的使用请参考数据交换UpdateData，那篇文章  
-	int index = m_comboxs2.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	int index = m_comboxs1.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
 	CString strI;
 	strI.Format(_T("%d"), index);
 	CString strC;
-	m_comboxs2.GetLBText(index, strC);        //根据行号，这个可以得到那行的字符串  
+	m_comboxs1.GetLBText(index, strC);        //根据行号，这个可以得到那行的字符串  
 	CString sqlorder;
 	sqlorder = strC;
 	CString strSQL; //存放sql语句
@@ -208,7 +208,7 @@ void Ctext4::OnBnClickedButton2()
 void Ctext4::OnBnClickedButton4()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=172.20.126.25,1433;Database=text;uid=300391;pwd=30039621;"))
+	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
 		return;
 	vector<_variant_t> vName;	//设置要返回的列名
 	vName.push_back("工作台");
@@ -219,11 +219,11 @@ void Ctext4::OnBnClickedButton4()
 	//查询结果
 
 	UpdateData(TRUE);                       //这个函数的使用请参考数据交换UpdateData，那篇文章  
-	int index = m_comboxs1.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	int index = m_comboxs2.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
 	CString strI;
 	strI.Format(_T("%d"), index);
 	CString strC;
-	m_comboxs1.GetLBText(index, strC);        //根据行号，这个可以得到那行的字符串  
+	m_comboxs2.GetLBText(index, strC);        //根据行号，这个可以得到那行的字符串  
 	CString sqlorder;
 	sqlorder = strC;
 	CString strSQL; //存放sql语句
