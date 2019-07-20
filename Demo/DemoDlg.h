@@ -1,20 +1,20 @@
 ﻿
-// PracticeDlg.h: 头文件
+// DemoDlg.h: 头文件
 //
 
 #pragma once
 
 
-// CPracticeDlg 对话框
-class CPracticeDlg : public CDialogEx
+// CDemoDlg 对话框
+class CDemoDlg : public CDialogEx
 {
 // 构造
 public:
-	CPracticeDlg(CWnd* pParent = nullptr);	// 标准构造函数
+	CDemoDlg(CWnd* pParent = nullptr);	// 标准构造函数
 
 // 对话框数据
 #ifdef AFX_DESIGN_TIME
-	enum { IDD = IDD_PRACTICE_DIALOG };
+	enum { IDD = IDD_DEMO_DIALOG };
 #endif
 
 	protected:

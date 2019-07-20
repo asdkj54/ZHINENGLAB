@@ -1,26 +1,26 @@
 ﻿
-// Practice.cpp: 定义应用程序的类行为。
+// Demo.cpp: 定义应用程序的类行为。
 //
 
 #include "stdafx.h"
-#include "Practice.h"
-#include "PracticeDlg.h"
+#include "Demo.h"
+#include "DemoDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
 
-// CPracticeApp
+// CDemoApp
 
-BEGIN_MESSAGE_MAP(CPracticeApp, CWinApp)
+BEGIN_MESSAGE_MAP(CDemoApp, CWinApp)
 	ON_COMMAND(ID_HELP, &CWinApp::OnHelp)
 END_MESSAGE_MAP()
 
 
-// CPracticeApp 构造
+// CDemoApp 构造
 
-CPracticeApp::CPracticeApp()
+CDemoApp::CDemoApp()
 {
 	// 支持重新启动管理器
 	m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_RESTART;
@@ -30,14 +30,14 @@ CPracticeApp::CPracticeApp()
 }
 
 
-// 唯一的 CPracticeApp 对象
+// 唯一的 CDemoApp 对象
 
-CPracticeApp theApp;
+CDemoApp theApp;
 
 
-// CPracticeApp 初始化
+// CDemoApp 初始化
 
-BOOL CPracticeApp::InitInstance()
+BOOL CDemoApp::InitInstance()
 {
 	// 如果一个运行在 Windows XP 上的应用程序清单指定要
 	// 使用 ComCtl32.dll 版本 6 或更高版本来启用可视化方式，
@@ -70,7 +70,7 @@ BOOL CPracticeApp::InitInstance()
 	// 例如修改为公司或组织名
 	SetRegistryKey(_T("应用程序向导生成的本地应用程序"));
 
-	CPracticeDlg dlg;
+	CDemoDlg dlg;
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();
 	if (nResponse == IDOK)

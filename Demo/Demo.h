@@ -1,5 +1,5 @@
 ﻿
-// Practice.h: PROJECT_NAME 应用程序的主头文件
+// Demo.h: PROJECT_NAME 应用程序的主头文件
 //
 
 #pragma once
@@ -11,14 +11,14 @@
 #include "resource.h"		// 主符号
 
 
-// CPracticeApp:
-// 有关此类的实现，请参阅 Practice.cpp
+// CDemoApp:
+// 有关此类的实现，请参阅 Demo.cpp
 //
 
-class CPracticeApp : public CWinApp
+class CDemoApp : public CWinApp
 {
 public:
-	CPracticeApp();
+	CDemoApp();
 
 // 重写
 public:
@@ -29,4 +29,4 @@ public:
 	DECLARE_MESSAGE_MAP()
 };
 
-extern CPracticeApp theApp;
+extern CDemoApp theApp;

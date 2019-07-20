@@ -1,10 +1,10 @@
 ﻿
-// PracticeDlg.cpp: 实现文件
+// DemoDlg.cpp: 实现文件
 //
 
 #include "stdafx.h"
-#include "Practice.h"
-#include "PracticeDlg.h"
+#include "Demo.h"
+#include "DemoDlg.h"
 #include "afxdialogex.h"
 
 #ifdef _DEBUG
@@ -45,31 +45,31 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 
-// CPracticeDlg 对话框
+// CDemoDlg 对话框
 
 
 
-CPracticeDlg::CPracticeDlg(CWnd* pParent /*=nullptr*/)
-	: CDialogEx(IDD_PRACTICE_DIALOG, pParent)
+CDemoDlg::CDemoDlg(CWnd* pParent /*=nullptr*/)
+	: CDialogEx(IDD_DEMO_DIALOG, pParent)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
-void CPracticeDlg::DoDataExchange(CDataExchange* pDX)
+void CDemoDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
 }
 
-BEGIN_MESSAGE_MAP(CPracticeDlg, CDialogEx)
+BEGIN_MESSAGE_MAP(CDemoDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 END_MESSAGE_MAP()
 
 
-// CPracticeDlg 消息处理程序
+// CDemoDlg 消息处理程序
 
-BOOL CPracticeDlg::OnInitDialog()
+BOOL CDemoDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
@@ -103,7 +103,7 @@ BOOL CPracticeDlg::OnInitDialog()
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
-void CPracticeDlg::OnSysCommand(UINT nID, LPARAM lParam)
+void CDemoDlg::OnSysCommand(UINT nID, LPARAM lParam)
 {
 	if ((nID & 0xFFF0) == IDM_ABOUTBOX)
 	{
@@ -120,7 +120,7 @@ void CPracticeDlg::OnSysCommand(UINT nID, LPARAM lParam)
 //  来绘制该图标。  对于使用文档/视图模型的 MFC 应用程序，
 //  这将由框架自动完成。
 
-void CPracticeDlg::OnPaint()
+void CDemoDlg::OnPaint()
 {
 	if (IsIconic())
 	{
@@ -147,7 +147,7 @@ void CPracticeDlg::OnPaint()
 
 //当用户拖动最小化窗口时系统调用此函数取得光标
 //显示。
-HCURSOR CPracticeDlg::OnQueryDragIcon()
+HCURSOR CDemoDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
 }
