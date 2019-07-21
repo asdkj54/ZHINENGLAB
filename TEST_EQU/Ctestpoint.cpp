@@ -55,7 +55,7 @@ BOOL Ctestpoint::OnInitDialog()
 	// TODO:  在此添加额外的初始化
 	// TODO: 在此添加额外的初始化代码
 	dlg.Create(IDD_testrecord);
-
+	dlg1.Create(IDD_shiyan1fenxi);
 	return TRUE;  // return TRUE unless you set the focus to a control
 				  // 异常: OCX 属性页应返回 FALSE
 }
@@ -126,8 +126,9 @@ void Ctestpoint::OnBnClickedButton1()
 void Ctestpoint::OnBnClickedButton3()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	Cshuyan1fenxi dlg;
-	dlg.DoModal();
+	//Cshuyan1fenxi dlg;
+	//dlg.DoModal();
+	dlg1.ShowWindow(SW_SHOWNORMAL);
 
 }
 

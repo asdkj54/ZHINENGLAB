@@ -189,6 +189,30 @@
     <ClInclude Include="ChartCtrl\PointsOrdering.h">
       <Filter>ChartCtrl</Filter>
     </ClInclude>
+    <ClInclude Include="Cshiyan2fenxi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cshiyan3fenxi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cshiyan4fenxi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cshiyan5fenxi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cshiyan6fenxi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cshiyan7fenxi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cshiyan8fenxi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cshiyan9fenxi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TEST_EQU.cpp">
@@ -331,6 +355,30 @@
     </ClCompile>
     <ClCompile Include="ChartCtrl\ChartXYSerie.cpp">
       <Filter>ChartCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Cshiyan2fenxi.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cshiyan3fenxi.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cshiyan4fenxi.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cshiyan5fenxi.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cshiyan6fenxi.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cshiyan7fenxi.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cshiyan8fenxi.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cshiyan9fenxi.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

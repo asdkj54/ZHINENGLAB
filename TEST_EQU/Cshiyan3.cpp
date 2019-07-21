@@ -34,6 +34,7 @@ BEGIN_MESSAGE_MAP(Cshiyan3, CDialogEx)
 	ON_WM_CTLCOLOR()
 	ON_BN_CLICKED(IDC_BUTTON4, &Cshiyan3::OnBnClickedButton4)
 	ON_BN_CLICKED(IDC_BUTTON5, &Cshiyan3::OnBnClickedButton5)
+	ON_BN_CLICKED(IDC_BUTTON3, &Cshiyan3::OnBnClickedButton3)
 END_MESSAGE_MAP()
 
 
@@ -160,7 +161,14 @@ BOOL Cshiyan3::OnInitDialog()
 	// TODO:  在此添加额外的初始化
 
 	dlg.Create(IDD_shiyan3report);
-
+	dlg1.Create(IDD_shiyan3fenxi);
 	return TRUE;  // return TRUE unless you set the focus to a control
 				  // 异常: OCX 属性页应返回 FALSE
+}
+
+
+void Cshiyan3::OnBnClickedButton3()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	dlg1.ShowWindow(SW_SHOWNORMAL);
 }

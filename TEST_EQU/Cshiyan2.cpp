@@ -6,7 +6,7 @@
 #include "Cshiyan2.h"
 #include "afxdialogex.h"
 #include "Cshiyan2report.h"
-
+#include"Cshiyan2fenxi.h"
 // Cshiyan2 对话框
 
 IMPLEMENT_DYNAMIC(Cshiyan2, CDialogEx)
@@ -34,6 +34,7 @@ BEGIN_MESSAGE_MAP(Cshiyan2, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON1, &Cshiyan2::OnBnClickedButton1)
 	ON_BN_CLICKED(IDC_BUTTON5, &Cshiyan2::OnBnClickedButton5)
 	ON_BN_CLICKED(IDC_BUTTON4, &Cshiyan2::OnBnClickedButton4)
+	ON_BN_CLICKED(IDC_BUTTON3, &Cshiyan2::OnBnClickedButton3)
 END_MESSAGE_MAP()
 
 
@@ -160,7 +161,14 @@ BOOL Cshiyan2::OnInitDialog()
 	// TODO:  在此添加额外的初始化
 	// TODO: 在此添加额外的初始化代码
 	dlg.Create(IDD_shiyan2report);
-
+	dlg1.Create(IDD_shiyan2fenxi);
 	return TRUE;  // return TRUE unless you set the focus to a control
 				  // 异常: OCX 属性页应返回 FALSE
+}
+
+
+void Cshiyan2::OnBnClickedButton3()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	dlg1.ShowWindow(SW_SHOWNORMAL);
 }

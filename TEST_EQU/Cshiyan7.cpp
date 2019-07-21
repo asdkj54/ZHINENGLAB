@@ -34,6 +34,7 @@ BEGIN_MESSAGE_MAP(Cshiyan7, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON5, &Cshiyan7::OnBnClickedButton5)
 	ON_BN_CLICKED(IDC_BUTTON4, &Cshiyan7::OnBnClickedButton4)
 	ON_BN_CLICKED(IDC_BUTTON2, &Cshiyan7::OnBnClickedButton2)
+	ON_BN_CLICKED(IDC_BUTTON3, &Cshiyan7::OnBnClickedButton3)
 END_MESSAGE_MAP()
 
 
@@ -159,7 +160,14 @@ BOOL Cshiyan7::OnInitDialog()
 	// TODO:  在此添加额外的初始化
 	// TODO: 在此添加额外的初始化代码
 	dlg.Create(IDD_shiyan7report);
-
+	dlg1.Create(IDD_shiyan7fenxi);
 	return TRUE;  // return TRUE unless you set the focus to a control
 				  // 异常: OCX 属性页应返回 FALSE
+}
+
+
+void Cshiyan7::OnBnClickedButton3()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	dlg1.ShowWindow(SW_SHOWNORMAL);
 }

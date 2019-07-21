@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include"Cshiyan9report.h"
-
+#include"Cshiyan9fenxi.h"
 // Cshiyan9 对话框
 
 class Cshiyan9 : public CDialogEx
@@ -17,6 +17,7 @@ public:
 #endif
 private:
 	Cshiyan9report dlg;
+	Cshiyan9fenxi dlg1;
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
 	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
@@ -30,4 +31,5 @@ public:
 	afx_msg void OnBnClickedopenGetFile();
 	afx_msg void OnBnClickedButton2();
 	virtual BOOL OnInitDialog();
+	afx_msg void OnBnClickedButton3();
 };

@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include "C.h"
-
+#include "Cshuyan1fenxi.h"
 // Ctestpoint 对话框
 
 class Ctestpoint : public CDialogEx
@@ -17,6 +17,7 @@ public:
 #endif
 private:
 	C dlg;
+	Cshuyan1fenxi dlg1;
 
 protected:
 	afx_msg void OnPaint();
