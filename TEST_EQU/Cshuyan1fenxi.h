@@ -3,7 +3,7 @@
 #include "ChartCtrl/ChartTitle.h"
 #include "ChartCtrl/ChartLineSerie.h"
 #include "ChartCtrl/ChartMouseListener.h"
-
+#include "DataBaseADO.h"
 // Cshuyan1fenxi 对话框
 
 class Cshuyan1fenxi : public CDialogEx
@@ -23,6 +23,11 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
 
 	DECLARE_MESSAGE_MAP()
+public:
+	CString VariantToCString(_variant_t var);
+private:
+
+	CDataBaseADO m_DataBase;
 public:
 	virtual BOOL OnInitDialog();
 	CChartCtrl m_ChartCtrl11;

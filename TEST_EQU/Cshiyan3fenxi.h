@@ -5,7 +5,7 @@
 #include "ChartCtrl/ChartLineSerie.h"
 #include "ChartCtrl/ChartMouseListener.h"
 // Cshiyan3fenxi 对话框
-
+#include "DataBaseADO.h"
 class Cshiyan3fenxi : public CDialogEx
 {
 	DECLARE_DYNAMIC(Cshiyan3fenxi)
@@ -28,4 +28,9 @@ public:
 public:
 	CChartCtrl m_ChartCtrl31;
 	afx_msg void OnBnClickedButton1();
+public:
+	CString VariantToCString(_variant_t var);
+private:
+
+	CDataBaseADO m_DataBase;
 };

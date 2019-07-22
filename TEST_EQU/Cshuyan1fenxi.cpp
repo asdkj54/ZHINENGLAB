@@ -5,7 +5,7 @@
 #include "TEST_EQU.h"
 #include "Cshuyan1fenxi.h"
 #include "afxdialogex.h"
-
+#include "DataBaseADO.h"
 
 // Cshuyan1fenxi 对话框
 
@@ -166,4 +166,110 @@ BOOL Cshuyan1fenxi::OnInitDialog()
 void Cshuyan1fenxi::OnBnClickedButton2()
 {
 	// TODO: 在此添加控件通知处理程序代码
+	//if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
+	//	return;
+	//vector<_variant_t> vName;	//设置要返回的列名
+	//vName.push_back("stu_num");
+
+	////查询结果
+
+	//UpdateData(TRUE);                       //这个函数的使用请参考数据交换UpdateData，那篇文章  
+
+	//CString sqlorder;
+
+	//CString strSQL; //存放sql语句
+	//strSQL.Format(_T("select stu_num from student where stu_name = 'sdadsd'"));
+	//vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
+	////m_ListCtrl.DeleteAllItems();	//删除所有的项目
+	////通过循环添加所有的内容
+	//int sizeR = vResult.size();
+	//CString y[10];
+	//double X1Values[10], Y1Values[10];
+	//for (int i = 0; i < vResult.size(); ++i)
+	//{
+	//	m_ListCtrl.InsertItem(i, VariantToCString(vResult.at(i).at(0)));
+	//	if (i < 10)
+	//	{
+	//		X1Values[i] = i;
+	//		y[i] = VariantToCString(vResult.at(i).at(0));
+	//		Y1Values[i] = _ttoi(y[i]);
+	//		Y1Values[i] = double(Y1Values[i]);
+	//	}
+
+	//	//m_edit1 = VariantToCString(vResult.at(i).at(0));
+	//	//插入一行，每行的第一列是序号
+	//	//m_ListCtrl.SetItemText(i, 1, VariantToCString(vResult.at(i).at(1)));	//设置该行的后面列的内容
+	//	//m_ListCtrl.SetItemText(i, 2, VariantToCString(vResult.at(i).at(2)));
+	//	//m_ListCtrl.SetItemText(i, 3, VariantToCString(vResult.at(i).at(3)));
+
+	//}
+
+	double X1Values[10], Y1Values[10];
+	for (int i = 0; i < 10; ++i)
+	{
+		X1Values[i] = i;
+		Y1Values[i] = 2 * i + 12;
+	}
+	CChartLineSerie *pLineSerie2;
+
+	m_ChartCtrl11.SetZoomEnabled(true);
+	m_ChartCtrl11.RemoveAllSeries();//先清空
+	pLineSerie2 = m_ChartCtrl11.CreateLineSerie();
+	pLineSerie2->SetSeriesOrdering(poNoOrdering);//设置为无序
+	pLineSerie2->SetPoints(X1Values, Y1Values, 10);
+
+	//UpdateData(FALSE);
+	m_DataBase.Close();	//记得要关闭连接
 }
+//void CMFCDataBaseDlg::OnBnClickedButton2()
+//{
+//	// TODO: 在此添加控件通知处理程序代码
+//	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
+//		return;
+//	vector<_variant_t> vName;	//设置要返回的列名
+//	vName.push_back("stu_num");
+//
+//	//查询结果
+//
+//	UpdateData(TRUE);                       //这个函数的使用请参考数据交换UpdateData，那篇文章  
+//
+//	CString sqlorder;
+//
+//	CString strSQL; //存放sql语句
+//	strSQL.Format(_T("select stu_num from student where stu_name = 'sdadsd'"));
+//	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
+//	m_ListCtrl.DeleteAllItems();	//删除所有的项目
+//	//通过循环添加所有的内容
+//	int sizeR = vResult.size();
+//	CString y[10];
+//	double X1Values[10], Y1Values[10];
+//	for (int i = 0; i < vResult.size(); ++i)
+//	{
+//		m_ListCtrl.InsertItem(i, VariantToCString(vResult.at(i).at(0)));
+//		if (i < 10)
+//		{
+//			X1Values[i] = i;
+//			y[i] = VariantToCString(vResult.at(i).at(0));
+//			Y1Values[i] = _ttoi(y[i]);
+//			Y1Values[i] = double(Y1Values[i]);
+//		}
+//
+//		//m_edit1 = VariantToCString(vResult.at(i).at(0));
+//		//插入一行，每行的第一列是序号
+//		//m_ListCtrl.SetItemText(i, 1, VariantToCString(vResult.at(i).at(1)));	//设置该行的后面列的内容
+//		//m_ListCtrl.SetItemText(i, 2, VariantToCString(vResult.at(i).at(2)));
+//		//m_ListCtrl.SetItemText(i, 3, VariantToCString(vResult.at(i).at(3)));
+//
+//	}
+//
+//	CChartLineSerie *pLineSerie2;
+//
+//	m_ChartCtrl1.SetZoomEnabled(true);
+//	m_ChartCtrl1.RemoveAllSeries();//先清空
+//	pLineSerie2 = m_ChartCtrl1.CreateLineSerie();
+//	pLineSerie2->SetSeriesOrdering(poNoOrdering);//设置为无序
+//	pLineSerie2->SetPoints(X1Values, Y1Values, 10);
+//
+//	UpdateData(FALSE);
+//	m_DataBase.Close();	//记得要关闭连接
+//}

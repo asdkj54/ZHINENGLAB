@@ -3,7 +3,7 @@
 #include "ChartCtrl/ChartTitle.h"
 #include "ChartCtrl/ChartLineSerie.h"
 #include "ChartCtrl/ChartMouseListener.h"
-
+#include "DataBaseADO.h"
 // Cshiyan7fenxi 对话框
 
 class Cshiyan7fenxi : public CDialogEx
@@ -28,4 +28,9 @@ public:
 public:
 	CChartCtrl m_ChartCtrl71;
 	afx_msg void OnBnClickedButton1();
+public:
+	CString VariantToCString(_variant_t var);
+private:
+
+	CDataBaseADO m_DataBase;
 };
