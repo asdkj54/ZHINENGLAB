@@ -13,8 +13,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deviceresouce", "Devicereso
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Scanning_tool", "Scanning_tool\Scanning_tool.vcxproj", "{63916FF6-8D0C-4F19-B68E-72E8DDEF5975}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Practice", "Practice\Practice.vcxproj", "{AB40DE96-8209-4CD1-9160-551492CEBC1E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -63,14 +61,6 @@ Global
 		{63916FF6-8D0C-4F19-B68E-72E8DDEF5975}.Release|x64.Build.0 = Release|x64
 		{63916FF6-8D0C-4F19-B68E-72E8DDEF5975}.Release|x86.ActiveCfg = Release|Win32
 		{63916FF6-8D0C-4F19-B68E-72E8DDEF5975}.Release|x86.Build.0 = Release|Win32
-		{AB40DE96-8209-4CD1-9160-551492CEBC1E}.Debug|x64.ActiveCfg = Debug|x64
-		{AB40DE96-8209-4CD1-9160-551492CEBC1E}.Debug|x64.Build.0 = Debug|x64
-		{AB40DE96-8209-4CD1-9160-551492CEBC1E}.Debug|x86.ActiveCfg = Debug|Win32
-		{AB40DE96-8209-4CD1-9160-551492CEBC1E}.Debug|x86.Build.0 = Debug|Win32
-		{AB40DE96-8209-4CD1-9160-551492CEBC1E}.Release|x64.ActiveCfg = Release|x64
-		{AB40DE96-8209-4CD1-9160-551492CEBC1E}.Release|x64.Build.0 = Release|x64
-		{AB40DE96-8209-4CD1-9160-551492CEBC1E}.Release|x86.ActiveCfg = Release|Win32
-		{AB40DE96-8209-4CD1-9160-551492CEBC1E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
