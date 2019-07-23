@@ -33,21 +33,19 @@ public:
 	virtual BOOL OnInitDialog();
 	afx_msg void OnBnClickedButton1();
 	// afx_msg void OnPaint();	// afx_msg void OnPaint();
-	CString m_editrv1;
-	CString m_editrv2;
-	CString m_editrv3;
-	CString m_editrv4;
-	CString m_editrv5;
-	CString m_editrv6;
+
 	afx_msg void OnBnClickedButton2();
 
 	CListCtrl m_listresM;
 	//afx_msg void OnLvnItemchangedList1(NMHDR *pNMHDR, LRESULT *pResult);
 	CComboBox m_combox2;
-	CEdit m_listr1;
-	CEdit m_listr2;
-	CEdit m_listr3;
-	CEdit m_listr;
-	CEdit m_listr5;
 
+
+	CComboBox m_rcombox1;
+	CComboBox m_rcombox2;
+	CComboBox m_rcombox3;
+	CComboBox m_rcombox4;
+	CString m_redit1;
+	CString m_redit3;
+	CDateTimeCtrl m_rdate1;
 };

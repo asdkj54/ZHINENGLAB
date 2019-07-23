@@ -21,12 +21,14 @@
 #define IDC_COMBO2                      1006
 #define IDC_EDIT5                       1007
 #define IDC_DATETIMEPICKER1             1007
+#define IDC_COMBO6                      1007
 #define IDC_EDIT6                       1008
 #define IDC_COMBO3                      1008
+#define IDC_COMBO7                      1008
 #define IDC_COMBO4                      1009
+#define IDC_COMBO8                      1009
 #define IDC_COMBO5                      1010
 #define IDC_DATETIMEPICKER2             1011
-#define IDC_DATETIMEPICKER3             1012
 #define IDC_COMBO1                      1013
 #define IDC_LIST1                       1014
 

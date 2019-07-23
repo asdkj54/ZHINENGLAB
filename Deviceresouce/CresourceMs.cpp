@@ -13,12 +13,9 @@ IMPLEMENT_DYNAMIC(CresourceMs, CDialogEx)
 
 CresourceMs::CresourceMs(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_resourceMs, pParent)
-	, m_editrv1(_T(""))
-	, m_editrv2(_T(""))
-	, m_editrv3(_T(""))
-	, m_editrv4(_T(""))
-	, m_editrv5(_T(""))
-	, m_editrv6(_T(""))
+
+	, m_redit1(_T(""))
+	, m_redit3(_T(""))
 {
 
 }
@@ -30,20 +27,17 @@ CresourceMs::~CresourceMs()
 void CresourceMs::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
-	DDX_Text(pDX, IDC_EDIT1, m_editrv1);
-	DDX_Text(pDX, IDC_EDIT2, m_editrv2);
-	DDX_Text(pDX, IDC_EDIT3, m_editrv3);
-	DDX_Text(pDX, IDC_EDIT4, m_editrv4);
-	DDX_Text(pDX, IDC_EDIT5, m_editrv5);
-	DDX_Text(pDX, IDC_EDIT6, m_editrv6);
 	DDX_Control(pDX, IDC_LIST1, m_listresM);
 	DDX_Control(pDX, IDC_COMBO1, m_combox2);
-	DDX_Control(pDX, IDC_EDIT1, m_listr1);
-	DDX_Control(pDX, IDC_EDIT2, m_listr2);
-	DDX_Control(pDX, IDC_EDIT3, m_listr3);
-	DDX_Control(pDX, IDC_EDIT4, m_listr);
-	DDX_Control(pDX, IDC_EDIT5, m_listr5);
 
+
+	DDX_Control(pDX, IDC_COMBO2, m_rcombox1);
+	DDX_Control(pDX, IDC_COMBO6, m_rcombox2);
+	DDX_Control(pDX, IDC_COMBO7, m_rcombox3);
+	DDX_Control(pDX, IDC_COMBO8, m_rcombox4);
+	DDX_Text(pDX, IDC_EDIT1, m_redit1);
+	DDX_Text(pDX, IDC_EDIT3, m_redit3);
+	DDX_Control(pDX, IDC_DATETIMEPICKER2, m_rdate1);
 }
 
 
@@ -195,7 +189,45 @@ void CresourceMs::OnBnClickedButton2()
 
 	UpdateData(TRUE);
 
-	strSQL.Format(_T("insert into resMs values( '%s', '%s', '%s', '%s', '%s', '%s')"), m_editrv1, m_editrv2, m_editrv3,m_editrv4, m_editrv5,m_editrv6);
+
+
+
+
+	int index1 = m_rcombox1.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI1;
+	strI1.Format(_T("%d"), index1);
+	CString strC1;
+	m_rcombox1.GetLBText(index1, strC1);
+
+	int index2 = m_rcombox2.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI2;
+	strI2.Format(_T("%d"), index2);
+	CString strC2;
+	m_rcombox2.GetLBText(index2, strC2);
+
+	int index3 = m_rcombox3.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI3;
+	strI3.Format(_T("%d"), index3);
+	CString strC3;
+	m_rcombox3.GetLBText(index3, strC3);
+
+	int index4 = m_rcombox4.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI4;
+	strI4.Format(_T("%d"), index4);
+	CString strC4;
+	m_rcombox4.GetLBText(index4, strC4);
+
+	CTime dtm2;
+
+	((CDateTimeCtrl*)GetDlgItem(IDC_DATETIMEPICKER2))->GetTime(dtm2);
+	CString dtime2 = dtm2.Format(_T("%Y-%m-%d"));
+
+
+
+
+
+
+	strSQL.Format(_T("insert into resMs values( '%s', '%s', '%s', '%s', '%s', '%s')"), strC1, strC2, m_redit1,strC3,dtime2,strC4,m_redit3);
 
 
 	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
