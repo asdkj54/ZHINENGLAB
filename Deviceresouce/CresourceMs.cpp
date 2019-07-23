@@ -217,17 +217,17 @@ void CresourceMs::OnBnClickedButton2()
 	CString strC4;
 	m_rcombox4.GetLBText(index4, strC4);
 
+
 	CTime dtm2;
 
-	((CDateTimeCtrl*)GetDlgItem(IDC_DATETIMEPICKER2))->GetTime(dtm2);
-	CString dtime2 = dtm2.Format(_T("%Y-%m-%d"));
+	dtm2 = CTime::GetCurrentTime();
+	CString dtime2 = dtm2.Format(_T("%Y-%m-%d %H:%M:%S"));
+
+	
 
 
 
-
-
-
-	strSQL.Format(_T("insert into resMs values( '%s', '%s', '%s', '%s', '%s', '%s')"), strC1, strC2, m_redit1,strC3,dtime2,strC4,m_redit3);
+	strSQL.Format(_T("insert into resMs values( '%s', '%s', '%s', '%s', '%s', '%s')"), strC1, strC2, m_redit1,strC3,dtime2,strC4+m_redit3);
 
 
 	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
