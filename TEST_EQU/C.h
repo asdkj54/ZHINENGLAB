@@ -31,9 +31,7 @@ public:
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedButton2();
 	afx_msg void OnBnClickedButton3();
-	CString m_text10;
-	CString m_text11;
-	CString m_text12;
+
 	CString m_text13;
 	CString m_text14;
 	CString m_text15;
@@ -42,7 +40,11 @@ public:
 	CString m_text18;
 	CString m_text19;
 	CString m_text110;
-	CString m_text111;
+
 //	CString m_textsourse;
 	CComboBox m_combox1;
+	CComboBox m_test1combox1;
+	CComboBox m_test1combox2;
+
+	CDateTimeCtrl m_test1date;
 };
