@@ -87,7 +87,7 @@ void CresourceMs::OnBnClickedButton1()
 	// TODO: 在此添加控件通知处理程序代码
 	//dlg.ShowWindow(SW_SHOWNORMAL);
 
-	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
+	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.43.107,1433;Database=text;uid=30039;pwd=30039621;"))
 		return;
 	vector<_variant_t> vName;	//设置要返回的列名
 	vName.push_back("物资");
@@ -180,7 +180,7 @@ void CresourceMs::OnPaint()
 void CresourceMs::OnBnClickedButton2()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
+	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.43.107,1433;Database=text;uid=30039;pwd=30039621;"))
 		return;
 	vector<_variant_t> vName;	//设置要返回的列名
 	vName.push_back("物资");

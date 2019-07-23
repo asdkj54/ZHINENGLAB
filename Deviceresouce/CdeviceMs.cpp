@@ -13,12 +13,7 @@ IMPLEMENT_DYNAMIC(CdeviceMs, CDialogEx)
 
 CdeviceMs::CdeviceMs(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_deviceMs, pParent)
-	, m_editv1(_T(""))
-	, m_editv2(_T(""))
-	, m_editv3(_T(""))
-	, m_editv4(_T(""))
-	, m_editv5(_T(""))
-	, m_editv6(_T(""))
+
 {
 
 }
@@ -32,18 +27,13 @@ void CdeviceMs::DoDataExchange(CDataExchange* pDX)
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_LIST1, m_listdeviM);
 	DDX_Control(pDX, IDC_COMBO1, m_combox1);
-	//DDX_Control(pDX, IDC_EDIT1, m_edit1);
-	//DDX_Control(pDX, IDC_EDIT2, m_edit2);
-	//DDX_Control(pDX, IDC_EDIT3, m_edit3);
-	//DDX_Control(pDX, IDC_EDIT4, m_edit4);
-	//DDX_Control(pDX, IDC_EDIT5, m_edit5);
-	//DDX_Control(pDX, IDC_EDIT6, m_edit6);
-	DDX_Text(pDX, IDC_EDIT1, m_editv1);
-	DDX_Text(pDX, IDC_EDIT2, m_editv2);
-	DDX_Text(pDX, IDC_EDIT3, m_editv3);
-	DDX_Text(pDX, IDC_EDIT4, m_editv4);
-	DDX_Text(pDX, IDC_EDIT5, m_editv5);
-	DDX_Text(pDX, IDC_EDIT6, m_editv6);
+
+	DDX_Control(pDX, IDC_COMBO2, m_dcombox1);
+	DDX_Control(pDX, IDC_COMBO3, m_dcombox2);
+	DDX_Control(pDX, IDC_COMBO4, m_dcombox3);
+	DDX_Control(pDX, IDC_COMBO5, m_dcombox4);
+	DDX_Control(pDX, IDC_DATETIMEPICKER1, m_ddate1);
+	DDX_Control(pDX, IDC_DATETIMEPICKER2, m_ddate2);
 }
 
 
@@ -63,7 +53,7 @@ void CdeviceMs::OnBnClickedButton1()
 {
 	// TODO: 在此添加控件通知处理程序代码
 
-	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
+	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.43.107,1433;Database=text;uid=30039;pwd=30039621;"))
 		return;
 	vector<_variant_t> vName;	//设置要返回的列名
 	vName.push_back("设备名称");
@@ -244,7 +234,7 @@ CString CdeviceMs::VariantToCString(_variant_t var)
 void CdeviceMs::OnBnClickedButton2()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
+	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.43.107,1433;Database=text;uid=30039;pwd=30039621;"))
 		return;
 	vector<_variant_t> vName;	//设置要返回的列名
 	vName.push_back("设备名称");
@@ -259,7 +249,41 @@ void CdeviceMs::OnBnClickedButton2()
 
 	UpdateData(TRUE);
 	
-	strSQL.Format(_T("insert into DevMs values( '%s', '%s', '%s', '%s', '%s', '%s')"), m_editv1, m_editv2, m_editv3, m_editv4, m_editv5, m_editv6 );
+	int index1 = m_dcombox1.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI1;
+	strI1.Format(_T("%d"), index1);
+	CString strC1;
+	m_dcombox1.GetLBText(index1, strC1);
+
+	int index2 = m_dcombox2.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI2;
+	strI2.Format(_T("%d"), index2);
+	CString strC2;
+	m_dcombox2.GetLBText(index2, strC2);
+
+	int index3 = m_dcombox3.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI3;
+	strI3.Format(_T("%d"), index3);
+	CString strC3;
+	m_dcombox3.GetLBText(index3, strC3);
+
+	int index4 = m_dcombox4.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI4;
+	strI4.Format(_T("%d"), index4);
+	CString strC4;
+	m_dcombox4.GetLBText(index4, strC4);
+
+	CTime dtm2, dtm1;
+
+	((CDateTimeCtrl*)GetDlgItem(IDC_DATETIMEPICKER1))->GetTime(dtm1);
+	CString dtime1 = dtm1.Format(_T("%Y-%m-%d"));
+
+	((CDateTimeCtrl*)GetDlgItem(IDC_DATETIMEPICKER2))->GetTime(dtm2);
+	CString dtime2 = dtm2.Format(_T("%Y-%m-%d"));
+
+
+
+	strSQL.Format(_T("insert into DevMs values( '%s', '%s', '%s', '%s', '%s', '%s')"), strC1, strC2, strC3, strC4, dtime1, dtime2 );
 	
 	
 	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));

@@ -37,16 +37,11 @@ public:
 	CListCtrl m_listdeviM;
 	CComboBox m_combox1;
 	afx_msg void OnBnClickedButton2();
-	CEdit m_edit1;
-	CEdit m_edit2;
-	CEdit m_edit3;
-	CEdit m_edit4;
-	CEdit m_edit5;
-	CEdit m_edit6;
-	CString m_editv1;
-	CString m_editv2;
-	CString m_editv3;
-	CString m_editv4;
-	CString m_editv5;
-	CString m_editv6;
+
+	CComboBox m_dcombox1;
+	CComboBox m_dcombox2;
+	CComboBox m_dcombox3;
+	CComboBox m_dcombox4;
+	CDateTimeCtrl m_ddate1;
+	CDateTimeCtrl m_ddate2;
 };
