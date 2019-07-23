@@ -46,12 +46,11 @@ public:
 	CComboBox m_comboxm2;
 	CComboBox m_comboxm3;
 	afx_msg void OnBnClickedButton5();
-	CString m_editm1;
-	CString m_editm2;
-	CString m_editm3;
-	CEdit m_editm4;
-	CString m_editm44;
-	CString m_editm5;
-	CEdit m_editm6;
-	CString m_editm66;
+
+	CComboBox m_medcombox1;
+	CComboBox m_medcombox2;
+	CComboBox m_medcombox3;
+	CString m_mededit1;
+	CDateTimeCtrl m_meddate1;
+	CDateTimeCtrl m_meddate2;
 };

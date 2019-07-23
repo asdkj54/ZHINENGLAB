@@ -33,7 +33,9 @@
 #define IDC_EDIT3                       1022
 #define IDC_BUTTON5                     1023
 #define IDC_EDIT4                       1024
+#define IDC_DATETIMEPICKER1             1024
 #define IDC_EDIT5                       1025
+#define IDC_DATETIMEPICKER2             1025
 #define IDC_EDIT6                       1026
 #define IDC_EDIT7                       1027
 #define IDC_EDIT8                       1028
@@ -44,7 +46,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        146
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1024
+#define _APS_NEXT_CONTROL_VALUE         1026
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

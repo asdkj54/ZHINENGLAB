@@ -13,12 +13,7 @@ IMPLEMENT_DYNAMIC(CmediclogQuery, CDialogEx)
 
 CmediclogQuery::CmediclogQuery(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_mediclogQuery, pParent)
-	, m_editm1(_T(""))
-	, m_editm2(_T(""))
-	, m_editm3(_T(""))
-	, m_editm44(_T(""))
-	, m_editm5(_T(""))
-	, m_editm66(_T(""))
+	, m_mededit1(_T(""))
 {
 
 }
@@ -34,14 +29,12 @@ void CmediclogQuery::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_COMBO2, m_comboxm1);
 	DDX_Control(pDX, IDC_COMBO3, m_comboxm2);
 	DDX_Control(pDX, IDC_COMBO4, m_comboxm3);
-	DDX_Text(pDX, IDC_EDIT3, m_editm1);
-	DDX_Text(pDX, IDC_EDIT4, m_editm2);
-	DDX_Text(pDX, IDC_EDIT5, m_editm3);
-	DDX_Control(pDX, IDC_EDIT6, m_editm4);
-	DDX_Text(pDX, IDC_EDIT6, m_editm44);
-	DDX_Text(pDX, IDC_EDIT7, m_editm5);
-	DDX_Control(pDX, IDC_EDIT8, m_editm6);
-	DDX_Text(pDX, IDC_EDIT8, m_editm66);
+	DDX_Control(pDX, IDC_COMBO1, m_medcombox1);
+	DDX_Control(pDX, IDC_COMBO5, m_medcombox2);
+	DDX_Control(pDX, IDC_COMBO6, m_medcombox3);
+	DDX_Text(pDX, IDC_EDIT6, m_mededit1);
+	DDX_Control(pDX, IDC_DATETIMEPICKER1, m_meddate1);
+	DDX_Control(pDX, IDC_DATETIMEPICKER2, m_meddate2);
 }
 
 
@@ -375,7 +368,40 @@ void CmediclogQuery::OnBnClickedButton5()
 
 	UpdateData(TRUE);
 
-	strSQL.Format(_T("insert into LABmedic values( '%s', '%s', '%s', '%s', '%s', '%s')"), m_editm1, m_editm2, m_editm3, m_editm44, m_editm5, m_editm66);
+
+
+	int index1 = m_medcombox1.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI1;
+	strI1.Format(_T("%d"), index1);
+	CString strC1;
+	m_medcombox1.GetLBText(index1, strC1);
+
+	int index2 = m_medcombox2.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI2;
+	strI2.Format(_T("%d"), index2);
+	CString strC2;
+	m_medcombox2.GetLBText(index2, strC2);
+
+	int index3 = m_medcombox3.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI3;
+	strI3.Format(_T("%d"), index3);
+	CString strC3;
+	m_medcombox3.GetLBText(index3, strC3);
+
+
+	CTime dtm2, dtm1;
+
+	((CDateTimeCtrl*)GetDlgItem(IDC_DATETIMEPICKER1))->GetTime(dtm1);
+	CString dtime1 = dtm1.Format(_T("%Y-%m-%d"));
+
+	dtm2 = CTime::GetCurrentTime();
+	CString dtime2 = dtm2.Format(_T("%Y-%m-%d %H:%M:%S"));
+
+
+
+
+
+	strSQL.Format(_T("insert into LABmedic values( '%s', '%s', '%s', '%s', '%s', '%s')"),dtime1, strC1, strC2,dtime2,strC3,m_mededit1);
 
 
 	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
