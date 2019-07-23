@@ -30,8 +30,8 @@ public:
 	CChartCtrl m_ChartCtrl61;
 	afx_msg void OnBnClickedButton1();
 public:
-	CString VariantToCString(_variant_t var);
-private:
 
+private:
+	CString VariantToCString(_variant_t var);
 	CDataBaseADO m_DataBase;
 };

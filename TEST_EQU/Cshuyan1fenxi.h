@@ -24,9 +24,9 @@ protected:
 
 	DECLARE_MESSAGE_MAP()
 public:
-	CString VariantToCString(_variant_t var);
+	
 private:
-
+	CString VariantToCString(_variant_t var);
 	CDataBaseADO m_DataBase;
 public:
 	virtual BOOL OnInitDialog();

@@ -141,7 +141,7 @@ void CmediclogQuery::OnBnClickedButton2()
 {
 	// TODO: 在此添加控件通知处理程序代码
 	//dlg.ShowWindow(SW_SHOWNORMAL);
-	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
+	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.240.165,1433;Database=text;uid=30039;pwd=30039621;"))
 		return;
 	vector<_variant_t> vName;	//设置要返回的列名
 	vName.push_back("日期");
@@ -181,7 +181,7 @@ void CmediclogQuery::OnBnClickedButton1()
 {
 	// TODO: 在此添加控件通知处理程序代码
 	//dlg1.ShowWindow(SW_SHOWNORMAL);
-	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
+	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.240.165,1433;Database=text;uid=30039;pwd=30039621;"))
 		return;
 	vector<_variant_t> vName;	//设置要返回的列名
 	vName.push_back("日期");
@@ -220,7 +220,7 @@ void CmediclogQuery::OnBnClickedButton3()
 {
 	// TODO: 在此添加控件通知处理程序代码
 	//dlg2.ShowWindow(SW_SHOWNORMAL);
-	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
+	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.240.165,1433;Database=text;uid=30039;pwd=30039621;"))
 		return;
 	vector<_variant_t> vName;	//设置要返回的列名
 	vName.push_back("日期");
@@ -259,7 +259,7 @@ void CmediclogQuery::OnBnClickedButton4()
 {
 	// TODO: 在此添加控件通知处理程序代码
 	//dlg3.ShowWindow(SW_SHOWNORMAL);
-	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
+	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.240.165,1433;Database=text;uid=30039;pwd=30039621;"))
 		return;
 	vector<_variant_t> vName;	//设置要返回的列名
 	vName.push_back("日期");
@@ -360,7 +360,7 @@ CString CmediclogQuery::VariantToCString(_variant_t var)
 void CmediclogQuery::OnBnClickedButton5()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.3.209,1433;Database=text;uid=30039;pwd=30039621;"))
+	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.240.165,1433;Database=text;uid=30039;pwd=30039621;"))
 		return;
 	vector<_variant_t> vName;	//设置要返回的列名
 	vName.push_back("日期");
