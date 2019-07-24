@@ -13,11 +13,7 @@ IMPLEMENT_DYNAMIC(Cshiyan5report, CDialogEx)
 
 Cshiyan5report::Cshiyan5report(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_shiyan5report, pParent)
-	, m_edits51(_T(""))
-	, m_edits52(_T(""))
-	, m_edits53(_T(""))
 	, m_edits54(_T(""))
-	, m_edits55(_T(""))
 {
 
 }
@@ -31,11 +27,10 @@ void Cshiyan5report::DoDataExchange(CDataExchange* pDX)
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_LIST1, m_listshiyan5);
 	DDX_Control(pDX, IDC_COMBO2, m_comboxs5);
-	DDX_Text(pDX, IDC_EDIT14, m_edits51);
-	DDX_Text(pDX, IDC_EDIT2, m_edits52);
-	DDX_Text(pDX, IDC_EDIT4, m_edits53);
 	DDX_Text(pDX, IDC_EDIT5, m_edits54);
-	DDX_Text(pDX, IDC_EDIT6, m_edits55);
+	DDX_Control(pDX, IDC_COMBO3, m_text5combox1);
+	DDX_Control(pDX, IDC_DATETIMEPICKER1, m_text5date);
+	DDX_Control(pDX, IDC_COMBO4, m_text5combox2);
 }
 
 
@@ -233,7 +228,32 @@ void Cshiyan5report::OnBnClickedButton3()
 
 	UpdateData(TRUE);
 
-	strSQL.Format(_T("insert into test5 values( '%s','%s', '%s', '%s', '%s')"), m_edits51, m_edits52, m_edits53, m_edits54, m_edits55);
+
+
+	CString m_text5name;
+	m_text5name.Format(_T("酸值测定试验"));
+
+	int index1 = m_text5combox1.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI1;
+	strI1.Format(_T("%d"), index1);
+	CString strC1;
+	m_text5combox1.GetLBText(index1, strC1);
+
+	int index2 = m_text5combox2.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI2;
+	strI2.Format(_T("%d"), index2);
+	CString strC2;
+	m_text5combox2.GetLBText(index2, strC2);
+
+
+	CTime dtm2;
+
+	dtm2 = CTime::GetCurrentTime();
+	CString dtime2 = dtm2.Format(_T("%Y-%m-%d %H:%M:%S"));
+
+
+
+	strSQL.Format(_T("insert into test5 values( '%s','%s', '%s', '%s', '%s')"), strC1, dtime2, m_text5name, m_edits54, strC2);
 	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
 	m_listshiyan5.DeleteAllItems();	//删除所有的项目;
 //通过循环添加所有的内容

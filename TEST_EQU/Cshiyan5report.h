@@ -28,13 +28,12 @@ protected:
 public:
 	CListCtrl m_listshiyan5;
 	CComboBox m_comboxs5;
-	CString m_edits51;
-	CString m_edits52;
-	CString m_edits53;
 	CString m_edits54;
-	CString m_edits55;
 	virtual BOOL OnInitDialog();
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedButton2();
 	afx_msg void OnBnClickedButton3();
+	CComboBox m_text5combox1;
+	CDateTimeCtrl m_text5date;
+	CComboBox m_text5combox2;
 };
