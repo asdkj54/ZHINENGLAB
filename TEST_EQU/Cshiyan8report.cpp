@@ -13,11 +13,7 @@ IMPLEMENT_DYNAMIC(Cshiyan8report, CDialogEx)
 
 Cshiyan8report::Cshiyan8report(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_shiyan8report, pParent)
-	, m_edits81(_T(""))
-	, m_edits82(_T(""))
-	, m_edits83(_T(""))
 	, m_edits84(_T(""))
-	, m_edits85(_T(""))
 {
 
 }
@@ -31,11 +27,10 @@ void Cshiyan8report::DoDataExchange(CDataExchange* pDX)
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_LIST1, m_listshiyan8);
 	DDX_Control(pDX, IDC_COMBO2, m_comboxs8);
-	DDX_Text(pDX, IDC_EDIT14, m_edits81);
-	DDX_Text(pDX, IDC_EDIT2, m_edits82);
-	DDX_Text(pDX, IDC_EDIT4, m_edits83);
 	DDX_Text(pDX, IDC_EDIT5, m_edits84);
-	DDX_Text(pDX, IDC_EDIT6, m_edits85);
+	DDX_Control(pDX, IDC_COMBO3, m_test8combox1);
+	DDX_Control(pDX, IDC_COMBO4, m_test8combox2);
+	DDX_Control(pDX, IDC_DATETIMEPICKER1, m_test8date);
 }
 
 
@@ -232,7 +227,30 @@ void Cshiyan8report::OnBnClickedButton3()
 
 	UpdateData(TRUE);
 
-	strSQL.Format(_T("insert into test8 values( '%s','%s', '%s', '%s', '%s')"), m_edits81, m_edits82, m_edits83, m_edits84, m_edits85);
+	CString m_text8name;
+	m_text8name.Format(_T("界面张力试验"));
+
+	int index1 = m_test8combox1.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI1;
+	strI1.Format(_T("%d"), index1);
+	CString strC1;
+	m_test8combox1.GetLBText(index1, strC1);
+
+	int index2 = m_test8combox2.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI2;
+	strI2.Format(_T("%d"), index2);
+	CString strC2;
+	m_test8combox2.GetLBText(index2, strC2);
+
+
+	CTime dtm2;
+
+	dtm2 = CTime::GetCurrentTime();
+	CString dtime2 = dtm2.Format(_T("%Y-%m-%d %H:%M:%S"));
+
+
+
+	strSQL.Format(_T("insert into test8 values( '%s','%s', '%s', '%s', '%s')"), strC1, dtime2, m_text8name, m_edits84, strC2);
 	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
 	m_listshiyan8.DeleteAllItems();	//删除所有的项目;
 //通过循环添加所有的内容

@@ -230,7 +230,7 @@ void Cshiyan7report::OnBnClickedButton3()
 	UpdateData(TRUE);
 
 	CString m_text7name;
-	m_text7name.Format(_T("闪口闪点试验"));
+	m_text7name.Format(_T("介损 体积电阻率测定"));
 
 	int index1 = m_test7combox1.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
 	CString strI1;

@@ -28,13 +28,12 @@ protected:
 public:
 	CListCtrl m_listshiyan8;
 	CComboBox m_comboxs8;
-	CString m_edits81;
-	CString m_edits82;
-	CString m_edits83;
 	CString m_edits84;
-	CString m_edits85;
 	virtual BOOL OnInitDialog();
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedButton2();
 	afx_msg void OnBnClickedButton3();
+	CComboBox m_test8combox1;
+	CComboBox m_test8combox2;
+	CDateTimeCtrl m_test8date;
 };
