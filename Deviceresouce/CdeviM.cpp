@@ -48,7 +48,7 @@ BOOL CdeviM::OnInitDialog()
 
 	// TODO:  在此添加额外的初始化
 	
-	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.43.107,1433;Database=text;uid=30039;pwd=30039621;"))
+	if (!m_DataBase.Open("Provider=SQLOLEDB;Server=192.168.1.157,1433;Database=text;uid=Lab;pwd=30039621;"))
 		return FALSE;
 	vector<_variant_t> vName;	//设置要返回的列名
 	vName.push_back("stu_id");
