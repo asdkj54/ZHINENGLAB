@@ -13,11 +13,7 @@ IMPLEMENT_DYNAMIC(Cshiyan9report, CDialogEx)
 
 Cshiyan9report::Cshiyan9report(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_shiyan9report, pParent)
-	, m_edits91(_T(""))
-	, m_edits92(_T(""))
-	, m_edits93(_T(""))
 	, m_edits94(_T(""))
-	, m_edits95(_T(""))
 {
 
 }
@@ -31,11 +27,10 @@ void Cshiyan9report::DoDataExchange(CDataExchange* pDX)
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_LIST1, m_listshiyan9);
 	DDX_Control(pDX, IDC_COMBO2, m_comboxs9);
-	DDX_Text(pDX, IDC_EDIT14, m_edits91);
-	DDX_Text(pDX, IDC_EDIT2, m_edits92);
-	DDX_Text(pDX, IDC_EDIT4, m_edits93);
 	DDX_Text(pDX, IDC_EDIT5, m_edits94);
-	DDX_Text(pDX, IDC_EDIT6, m_edits95);
+	DDX_Control(pDX, IDC_COMBO3, m_test9combox1);
+	DDX_Control(pDX, IDC_COMBO4, m_test9combox2);
+	DDX_Control(pDX, IDC_DATETIMEPICKER1, m_test9date);
 }
 
 
@@ -232,7 +227,29 @@ void Cshiyan9report::OnBnClickedButton3()
 
 	UpdateData(TRUE);
 
-	strSQL.Format(_T("insert into test9 values( '%s','%s', '%s', '%s', '%s')"), m_edits91, m_edits92, m_edits93, m_edits94, m_edits95);
+	CString m_text9name;
+	m_text9name.Format(_T("击穿电压试验"));
+
+	int index1 = m_test9combox1.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI1;
+	strI1.Format(_T("%d"), index1);
+	CString strC1;
+	m_test9combox1.GetLBText(index1, strC1);
+
+	int index2 = m_test9combox2.GetCurSel();       //这个函数用于得到用户选择的是下拉列表中的第几行，第一行的话，返回0，依次类推  
+	CString strI2;
+	strI2.Format(_T("%d"), index2);
+	CString strC2;
+	m_test9combox2.GetLBText(index2, strC2);
+
+	CTime dtm2;
+
+	dtm2 = CTime::GetCurrentTime();
+	CString dtime2 = dtm2.Format(_T("%Y-%m-%d %H:%M:%S"));
+
+
+
+	strSQL.Format(_T("insert into test9 values( '%s','%s', '%s', '%s', '%s')"), strC1, dtime2, m_text9name, m_edits94, strC2);
 	vector<vector<_variant_t>> vResult(m_DataBase.Select(::SysAllocString(strSQL), vName));
 	m_listshiyan9.DeleteAllItems();	//删除所有的项目;
 //通过循环添加所有的内容
